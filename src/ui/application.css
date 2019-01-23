@@ -1,0 +1,21 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.clicked-button {
+	/*-fx-background-color: transparent;
+	-fx-text-fill: white ;
+	-fx-font-weight: Bold;
+	-fx-text-alignment: center;
+	-fx-pref-width: 120px;
+	-fx-pref-height: 40px;*/
+	
+}
+
+.unclicked-button{
+	/*-fx-background-color: transparent;
+	-fx-text-fill: white ;
+	-fx-font-weight: Regular;
+	-fx-opacity: 0.5;
+	-fx-text-alignment: center;
+	-fx-pref-width: 120px;
+	-fx-pref-height: 40px;*/
+	
+} 
