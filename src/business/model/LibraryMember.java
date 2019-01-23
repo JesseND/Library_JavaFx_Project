@@ -8,22 +8,29 @@ public class LibraryMember extends Role implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 7950058660651825776L;
-	private String phoneNumber;
+	private String memberNumber;
 	private CheckoutRecord checkoutRecord;
 	
 	
-	public LibraryMember( String phoneNumber) {
+	public LibraryMember(String memberNumber) {
 		super(ROLETYPE.LIBRAY_MEMBER);
-		this.phoneNumber = phoneNumber;
+		this.memberNumber = memberNumber;
 		this.checkoutRecord = new CheckoutRecord();
 	}
 	
-	public String getPhoneNumber() {
-		return phoneNumber;
+	
+
+	public String getMemberNumber() {
+		return memberNumber;
 	}
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+
+
+
+	public void setMemberNumber(String memberNumber) {
+		this.memberNumber = memberNumber;
 	}
+
+
 
 	public CheckoutRecord getCheckoutRecord() {
 		return checkoutRecord;

@@ -16,17 +16,18 @@ public class Person implements Serializable{
 	private String firstName;
 	private String lastName;
 	private Account account; 
-	private List<Role> roles;
+	private List<Role> roles = new ArrayList<Role>();
 	private Address address;
+	private String phoneNumber;
 
-	public Person(int id, String firstName, String lastName, Role role, Address address) {
+	public Person(int id, String firstName, String lastName, Role role, Address address, String phoneNumber) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.account = null;
-		roles = new ArrayList<Role>();
 		roles.add(role);
 		this.address = address;
+		this.setPhoneNumber(phoneNumber);
 	} 
 	
 	public Person(int id, String firstName, String lastName,  Address address) {
@@ -104,6 +105,14 @@ public class Person implements Serializable{
 
 	public void setAccount(Account account) {
 		this.account = account;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 	
 }
