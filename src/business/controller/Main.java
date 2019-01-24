@@ -9,7 +9,6 @@ import javafx.stage.StageStyle;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 
 
@@ -17,7 +16,6 @@ public class Main extends Application {
 	
 	private double x, y;
 	public static Person loggedUser = null;
-	
 	@Override
 	public void start(Stage stage) {
 		try {

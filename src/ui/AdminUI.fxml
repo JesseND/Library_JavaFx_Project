@@ -38,7 +38,7 @@
 						<Insets top="10.0" />
 					</padding>
 					<font>
-						<Font name="System Bold" size="14.0" />
+						<Font size="14.0" />
 					</font>
 				</Button>
             <Button fx:id="books" mnemonicParsing="false" onAction="#loadBooks" prefHeight="30.0" prefWidth="182.0" style="-fx-background-color: transparent;" text="Books" textFill="WHITE">
@@ -59,7 +59,7 @@
 				</Button>
             <HBox alignment="CENTER" onMouseClicked="#logout" prefHeight="9.0" prefWidth="140.0">
                <children>
-                  <Label id="loggedUserName" prefHeight="17.0" text="Welcome J. NDAM" textFill="WHITE">
+                  <Label fx:id="loggedUserName" prefHeight="17.0" text="Welcome J. NDAM" textFill="WHITE">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
