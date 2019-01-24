@@ -20,9 +20,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -34,6 +37,8 @@ public class CheckoutController implements Initializable {
 	private ComboBox<String> membrsCbx;
 	@FXML
 	private ComboBox<String> booksCbx;
+	
+	ObservableList<String> list = FXCollections.observableArrayList("Software Engineering", "Big Data", "Algorithm", "DMBS");
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -47,6 +52,13 @@ public class CheckoutController implements Initializable {
 		for (Person p : members) {
 			membrsCbx.getItems().add(p.toString());
 		}
+		
+		booksCbx.setItems(list);
+	}
+	
+	@FXML
+	public void checkout(ActionEvent event){
+		new Alert(AlertType.INFORMATION, "Book checkouted.", ButtonType.OK).showAndWait();
 	}
 	
 	@FXML

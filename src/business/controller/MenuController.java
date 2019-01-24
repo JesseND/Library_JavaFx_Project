@@ -42,7 +42,7 @@ public class MenuController implements Initializable {
 			new Alert(AlertType.INFORMATION, "No Access.", ButtonType.OK).showAndWait();
 		} else {
 
-			Parent root = FXMLLoader.load(getClass().getResource("/ui/Books.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/ui/BookFXML.fxml"));
 			Scene scene = new Scene(root);
 			scene.setFill(Color.TRANSPARENT);
 			((Node) event.getSource()).getScene().getWindow().hide();
