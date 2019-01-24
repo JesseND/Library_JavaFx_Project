@@ -31,7 +31,7 @@ public class AdminController implements Initializable {
 	private Button books, members, checkouts;
 	private double x, y;
 	@FXML
-	private Label loggedUser;
+	private Label loggedUserName;
 
 	@FXML
 	public void loadBooks(ActionEvent event) {
@@ -132,9 +132,9 @@ public class AdminController implements Initializable {
 			members.setVisible(false);
 		}
 
-		// loggedUser
-		// .setText("Welcome " + Main.loggedUser.getFirstName().charAt(0) + ". "
-		// + Main.loggedUser.getLastName());
+//		 loggedUserName
+//		 .setText("Welcome " + Main.loggedUser.getFirstName() + ". "
+//		 + Main.loggedUser.getLastName());
 	}
 
 }

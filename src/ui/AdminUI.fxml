@@ -59,7 +59,7 @@
 				</Button>
             <HBox alignment="CENTER" onMouseClicked="#logout" prefHeight="9.0" prefWidth="140.0">
                <children>
-                  <Label id="loggedUser" prefHeight="17.0" text="Welcome J. NDAM" textFill="WHITE">
+                  <Label id="loggedUserName" prefHeight="17.0" text="Welcome J. NDAM" textFill="WHITE">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
