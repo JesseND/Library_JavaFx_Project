@@ -26,7 +26,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class AdminController implements Initializable {
+public class MenuController implements Initializable {
 
 	@FXML
 	BorderPane borderPane;
@@ -38,7 +38,7 @@ public class AdminController implements Initializable {
 
 	@FXML
 	public void loadBooks(ActionEvent event) throws IOException {
-		if (Main.loggedUser.getRoles().get(0).getRoleValue().equals(ROLETYPE.ADMIN)) {
+		if (Main.loggedUser.getRoles().get(0).getRoleValue().equals(ROLETYPE.LIBRARIAN)) {
 			new Alert(AlertType.INFORMATION, "No Access.", ButtonType.OK).showAndWait();
 		} else {
 
@@ -165,10 +165,11 @@ public class AdminController implements Initializable {
 
 		if (Main.loggedUser.getRoles().get(0).getRoleValue().equals(ROLETYPE.LIBRARIAN)) {
 			members.setDisable(false);
+			books.setDisable(false);
 		}
 
 		loggedUserName
-.setText("Welcome " + Main.loggedUser.getFirstName() + ". " + Main.loggedUser.getLastName());
+			.setText("Welcome " + Main.loggedUser.getFirstName() + ". " + Main.loggedUser.getLastName());
 	}
 
 }

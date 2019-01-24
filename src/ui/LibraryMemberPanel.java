@@ -59,6 +59,8 @@ public class LibraryMemberPanel extends Stage {
 	public LibraryMemberPanel(Stage ps) throws ClassNotFoundException {
 		primaryStage = ps;
 		primaryStage.setTitle("Member Form");
+		
+		primaryStage.initStyle(StageStyle.TRANSPARENT);
 
 		GridPane grid = new GridPane();
 		grid.setAlignment(Pos.CENTER);
@@ -183,9 +185,8 @@ public class LibraryMemberPanel extends Stage {
 				primaryStage = new Stage();
 				Parent root = null;
 				try {
-					root = FXMLLoader.load(getClass().getResource("/ui/AdminUI.fxml"));
+					root = FXMLLoader.load(getClass().getResource("/ui/MenuUI.fxml"));
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				Scene scene = new Scene(root);
@@ -227,6 +228,8 @@ public class LibraryMemberPanel extends Stage {
 		loadMemberList();
 
 		Scene scene = new Scene(grid);
+		scene.setFill(Color.TRANSPARENT);
+		primaryStage.initStyle(StageStyle.TRANSPARENT);
 		primaryStage.setScene(scene);
 		setScene(scene);
 	}

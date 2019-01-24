@@ -39,8 +39,6 @@ public class LoginController {
 	private TextField password;
 	@FXML
 	private Label message;
-	
-	
 
 	@FXML
 	public void login(ActionEvent event) throws IOException {
@@ -77,7 +75,7 @@ public class LoginController {
 		}
 
 		if (Main.loggedUser != null) {
-			root = FXMLLoader.load(getClass().getResource("/ui/AdminUI.fxml"));
+			root = FXMLLoader.load(getClass().getResource("/ui/MenuUI.fxml"));
 			Scene scene = new Scene(root);
 			scene.setFill(Color.TRANSPARENT);
 			((Node)event.getSource()).getScene().getWindow().hide();
