@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="216.0" prefWidth="310.0" style="-fx-background-color: #2D3443;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.controller.CheckoutController">
+<AnchorPane prefHeight="248.0" prefWidth="310.0" style="-fx-background-color: #2D3443;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.controller.CheckoutController">
    <children>
       <Button layoutX="75.0" layoutY="158.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: #2196f3;" text="Checkout book" textFill="WHITE">
          <font>
@@ -14,5 +14,10 @@
       </Button>
       <ComboBox fx:id="membrsCbx" layoutX="80.0" layoutY="29.0" prefHeight="30.0" prefWidth="150.0" promptText="Select a member" style="-fx-background-color: #a0a2ab;" />
       <ComboBox fx:id="booksCbx" layoutX="80.0" layoutY="90.0" prefHeight="30.0" prefWidth="150.0" promptText="Select a book" style="-fx-background-color: #a0a2ab;" />
+      <Button layoutX="129.0" layoutY="209.0" mnemonicParsing="false" onAction="#close" style="-fx-background-color: transparent;" text="Close" textFill="#a0a2ab">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
