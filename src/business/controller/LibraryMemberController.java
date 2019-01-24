@@ -14,12 +14,15 @@ public class LibraryMemberController {
 	
 	public static LibraryMemberController getInstance() { return instance; }
 	
-	public Person addNewMembers(Person person) {
-		List<Person> persons = getAllMembers();
-		persons.add(person);
-		return pDao.add(persons);
+	public void addNewMembers(List<Person> persons) {
+		pDao.add(persons);
 	}
 	
+	public void addMember(Person person) throws ClassNotFoundException{
+		List<Person> p = getAllMembers();
+		p.add(person);
+		addNewMembers(p);
+	}
 	public Person getMemberById(String id) {
 		return pDao.get(id);
 	}
@@ -28,7 +31,7 @@ public class LibraryMemberController {
 		return pDao.update(person);
 	}
 	
-	public List<Person> search(String query) {
+	public List<Person> search(String query) throws ClassNotFoundException {
 		String q = query.toLowerCase();
 		
 		return getAllMembers()
@@ -40,7 +43,7 @@ public class LibraryMemberController {
 				.collect(Collectors.toList());
 	}
 
-	public List<Person> getAllMembers() {
+	public List<Person> getAllMembers() throws ClassNotFoundException {
 		return pDao.getAll();
 	}
 }

@@ -50,7 +50,7 @@ public class LibraryMemberPanel extends Stage {
 	private Button createBtn = new Button("Create");
 	LibraryMemberController controller = LibraryMemberController.getInstance();
 	
-	public LibraryMemberPanel(Stage ps) {
+	public LibraryMemberPanel(Stage ps) throws ClassNotFoundException {
 		primaryStage = ps;
 		primaryStage.setTitle("Member Form");
 	
@@ -130,25 +130,34 @@ public class LibraryMemberPanel extends Stage {
 
 			@Override
 			public void handle(ActionEvent event) {		
-				createMember();
+				try {
+					createMember();
+				} catch (ClassNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		});
 		
-//		updateBtn.setOnAction(new EventHandler<ActionEvent>() {
-//
-//			@Override
-//			public void handle(ActionEvent event) {
-//				Person person = getMemberInfo();
-//				
-//				
-//				controller.updateMember(member);
-//				
-//				setTableData(controller.getAllMembers());
-//				
-//				clearForm();
-//				showDialog("Member has been updated.");
-//			}
-//		});
+		updateBtn.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				Person person = getMemberInfo();
+				
+				
+				controller.updateMember(person);
+				
+				try {
+					setTableData(controller.getAllMembers());
+				} catch (ClassNotFoundException e) {
+					e.printStackTrace();
+				}
+				
+				clearForm();
+				showDialog("Member has been updated.");
+			}
+		});
 		
 		clearBtn.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -162,7 +171,11 @@ public class LibraryMemberPanel extends Stage {
 
 			@Override
 			public void handle(ActionEvent event) {		
-				searchMembers();
+				try {
+					searchMembers();
+				} catch (ClassNotFoundException e) {
+					e.printStackTrace();
+				}
 			}
 		});
 
@@ -173,16 +186,18 @@ public class LibraryMemberPanel extends Stage {
 		        if (! row.isEmpty() && event.getButton()==MouseButton.PRIMARY 
 		             && event.getClickCount() == 2) {
 
-		            Person libMember = row.getItem();
+		            Person clickedLibMember = row.getItem();
 		            
 		            LibraryMemberController controller = LibraryMemberController.getInstance();
-					Person member = controller.getMemberById(String.valueOf(libMember.getId()));
-		            
+					Person member = controller.getMemberById(String.valueOf(clickedLibMember.getId()));
+		            System.out.println(member);
 					displayMemberInfo(member);
 		        }
 		    });
 		    return row ;
 		});
+	
+
 		
 		loadMemberList();
 		
@@ -211,18 +226,18 @@ public class LibraryMemberPanel extends Stage {
 	}
 
 	
-	private void createMember() {
+	private void createMember() throws ClassNotFoundException {
 		Person p = getMemberInfo();
 		
 		LibraryMemberController controller = LibraryMemberController.getInstance();
-		controller.addNewMembers(p);
+		controller.addMember(p);
 		data.add(p);				
 		
 		clearForm();
 		showDialog("Member has been created.");
 	}
 	
-	private void searchMembers() {
+	private void searchMembers() throws ClassNotFoundException {
 		String query = queryTextField.getText();
 		LibraryMemberController controller = LibraryMemberController.getInstance();
 		List<Person> persons = controller.search(query);
@@ -263,7 +278,7 @@ public class LibraryMemberPanel extends Stage {
         zipTextField.clear();
 	}
 	
-	private void loadMemberList() {
+	private void loadMemberList() throws ClassNotFoundException {
 		LibraryMemberController controller = LibraryMemberController.getInstance();
 		setTableData(controller.getAllMembers());
 	}
