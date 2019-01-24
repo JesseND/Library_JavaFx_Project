@@ -1,5 +1,6 @@
 package business.controller;
 	
+import business.model.Person;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +16,7 @@ import javafx.scene.paint.Color;
 public class Main extends Application {
 	
 	private double x, y;
+	public static Person loggedUser = null;
 	
 	@Override
 	public void start(Stage stage) {

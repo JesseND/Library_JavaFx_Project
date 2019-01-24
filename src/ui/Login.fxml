@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -11,7 +12,7 @@
 
 <AnchorPane fx:id="root" prefHeight="421.0" prefWidth="483.0" style="-fx-background-color: #2D3443;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.controller.LoginController">
    <children>
-      <TextField layoutX="128.0" layoutY="144.0" prefHeight="30.0" prefWidth="255.0" promptText="Username">
+      <TextField fx:id="username" layoutX="128.0" layoutY="144.0" prefHeight="30.0" prefWidth="255.0" promptText="Username">
          <font>
             <Font size="14.0" />
          </font></TextField>
@@ -19,7 +20,7 @@
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-      <PasswordField layoutX="128.0" layoutY="203.0" prefHeight="30.0" prefWidth="255.0" promptText="Password">
+      <PasswordField fx:id="password" layoutX="128.0" layoutY="203.0" prefHeight="30.0" prefWidth="255.0" promptText="Password">
          <font>
             <Font size="14.0" />
          </font>
@@ -39,6 +40,7 @@
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Button>
+      <Label fx:id="message" layoutX="119.0" layoutY="253.0" textFill="#df2222" />
    </children>
    <padding>
       <Insets bottom="25.0" left="50.0" right="50.0" top="25.0" />

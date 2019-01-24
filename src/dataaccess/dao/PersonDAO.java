@@ -17,7 +17,7 @@ public class PersonDAO {
 
 	private static PersonDAO pDao = new PersonDAO();
 	public static final String OUTPUT_DIR = System.getProperty("user.dir") 
-				+ File.pathSeparator+"dataaccess"+ File.pathSeparator+"person.txt";
+				+"\\src\\dataaccess\\person.txt";
 	
 	ObjectOutputStream output;
 	ObjectInputStream input;
