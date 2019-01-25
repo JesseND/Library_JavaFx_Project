@@ -44,11 +44,7 @@ public class CheckoutController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
 		List<Person> members = new ArrayList<Person>();
-		try {
-			members = PersonDAO.pDao.getAll();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+		members = PersonDAO.pDao.getAllLibMember();
 		for (Person p : members) {
 			membrsCbx.getItems().add(p.toString());
 		}

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import dataaccess.dao.PersonDAO;
 import business.model.Account;
 import business.model.Address;
 import business.model.Admin;
@@ -46,33 +47,15 @@ public class LoginController {
 		String login = username.getText().toString().trim();
 		String pass = password.getText().toString().trim();
 		
-//		Account acc = new Account();
-//		acc.setUsername(login);
-//		acc.setPassword(pass);
-		List<Person> persons = new ArrayList<Person>();
-		
-		Person p1= new Person(1, "Jesse", "NDAM", new Admin(), new Address("", "", "", ""), "7394939983");
-//		p1.setAccount(new Account());
-//		p1.getAccount().setUsername("admin");
-//		p1.getAccount().setPassword("admin");
-		
-		Person p2= new Person(1, "Abdu", "FALL", new Librarian(), new Address("", "", "", ""), "7394939983");
-//		p2.setAccount(new Account());
-//		p2.getAccount().setUsername("lib");
-//		p2.getAccount().setPassword("lib");
-		
-		persons.add(p1);
-		persons.add(p2);
-		
-		
-//		for (Person person : persons) {
-//			if (person.getAccount() != null) {
-//				if (person.getAccount().getUsername().equals(acc.getUsername()) 
-//						&& person.getAccount().getPassword().equals(acc.getPassword())) {
-//					Main.loggedUser = person;
-//				}
-//			}
-//		}
+		List<Person> persons = PersonDAO.pDao.getAdminOrLib();
+		for (Person person : persons) {
+			if (person.getAccount() != null) {
+				if (person.getAccount().getUsername().equals(login) 
+						&& person.getAccount().getPassword().equals(pass)) {
+					Main.loggedUser = person;
+				}
+			}
+		}
 
 		if (Main.loggedUser != null) {
 			root = FXMLLoader.load(getClass().getResource("/ui/MenuUI.fxml"));
