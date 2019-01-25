@@ -44,7 +44,7 @@ public class LibraryMemberController {
 	}
 
 	public List<Person> getAllMembers() throws ClassNotFoundException {
-		return pDao.getAll();
+		return pDao.getAllLibMember();
 	}
 }
 

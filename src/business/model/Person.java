@@ -24,7 +24,7 @@ public class Person implements Serializable{
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.account = null;
+		this.account = new Account("","");
 		roles.add(role);
 		this.address = address;
 		this.setPhoneNumber(phoneNumber);
@@ -34,18 +34,19 @@ public class Person implements Serializable{
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.account = null;
+		this.account = new Account("","");
 		this.address = address;
 	} 
 	
 	public Person(int id, String firstName, String lastName, Account account, 
-			List<Role> role, Address address) {
+			Role role, Address address, String phone) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.setAccount(account);
-		roles = new ArrayList<Role>(); 
+		roles.add(role); 
 		this.address = address;
+		this.phoneNumber = phone;
 	}
 
 	public String getFirstName() {

@@ -104,6 +104,7 @@ public class LibraryMemberPanel extends Stage {
 		Button updateBtn = new Button("Update");
 		Button clearBtn = new Button("Clear");
 		Button back = new Button("Back to menu");
+		
 		HBox hbBtn = new HBox(10);
 		hbBtn.setAlignment(Pos.BASELINE_CENTER);
 		hbBtn.getChildren().add(createBtn);
