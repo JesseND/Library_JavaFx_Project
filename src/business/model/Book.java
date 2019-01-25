@@ -19,8 +19,8 @@ public class Book implements Serializable {
 	private String title;
 	private String objectID;
 	private double price;
+	private int limit;
 	private BookData bookData;
-	//private boolean isAvailable;
 	private List<Author> authors;
 	private List<BookCopy> copies;
 	
@@ -31,11 +31,12 @@ public class Book implements Serializable {
 		objectID = uniqueID;
 	}
 	
-	public Book(String ISBNnumber, String title, double price, List<Author> authors) {
+	public Book(String ISBNnumber, String title, double price, int limit, List<Author> authors) {
 		this.ISBNnumber = ISBNnumber;
 		this.title = title;
 		this.price = price;
 		this.authors = authors;
+		this.limit = limit;
 		this.copies = null;
 		this.bookData = null;
 		this.objectID = null;
@@ -52,13 +53,13 @@ public class Book implements Serializable {
 	public void addBookCopy(BookCopy bookCopy) {
 		if(copies != null)
 			copies.add(bookCopy);
-		else {
+		/*else {
 			Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setHeaderText("Warring");
             alert.setContentText("You are accessing empty list");
 
              alert.showAndWait();
-		} 
+		} */
 			
 	}
 	
@@ -101,12 +102,18 @@ public class Book implements Serializable {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	/*public boolean isAvailable() {
-		return isAvailable;
+	public double getPrice() {
+		return price;
 	}
-	public void setAvailable(boolean isAvailable) {
-		this.isAvailable = isAvailable;
-	}*/
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public int getLimit() {
+		return limit;
+	}
+	public void setLimt(int limit) {
+		this.limit = limit;
+	}
 	public List<Author> getAuthors() {
 		return authors;
 	}

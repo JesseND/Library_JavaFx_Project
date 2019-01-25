@@ -14,7 +14,7 @@
          <children>
             <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="496.0">
                <children>
-                  <Label prefHeight="39.0" prefWidth="198.0" text="First Name">
+                  <Label prefHeight="30.0" prefWidth="198.0" text="First Name">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -22,7 +22,7 @@
                         <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="268.0">
+                  <TextField fx:id="firstNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="268.0">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
@@ -31,7 +31,7 @@
             </HBox>
             <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="496.0">
                <children>
-                  <Label prefHeight="39.0" prefWidth="198.0" text="Last Name">
+                  <Label prefHeight="30.0" prefWidth="198.0" text="Last Name">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -39,7 +39,7 @@
                         <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="268.0">
+                  <TextField fx:id="lastNameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="268.0">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
@@ -48,7 +48,7 @@
             </HBox>
             <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="496.0">
                <children>
-                  <Label prefHeight="39.0" prefWidth="198.0" text="State">
+                  <Label prefHeight="30.0" prefWidth="198.0" text="State">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -56,7 +56,7 @@
                         <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="268.0">
+                  <TextField fx:id="stateField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="268.0">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
@@ -65,7 +65,7 @@
             </HBox>
             <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="496.0">
                <children>
-                  <Label prefHeight="39.0" prefWidth="198.0" text="City">
+                  <Label prefHeight="30.0" prefWidth="198.0" text="City">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -73,7 +73,7 @@
                         <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="268.0">
+                  <TextField fx:id="cityField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="268.0">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
@@ -82,7 +82,7 @@
             </HBox>
             <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="496.0">
                <children>
-                  <Label prefHeight="39.0" prefWidth="198.0" text="Zip">
+                  <Label prefHeight="30.0" prefWidth="198.0" text="Zip">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -90,7 +90,7 @@
                         <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="268.0">
+                  <TextField fx:id="zipField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="268.0">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
@@ -99,7 +99,7 @@
             </HBox>
             <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="496.0">
                <children>
-                  <Label prefHeight="39.0" prefWidth="198.0" text="Street">
+                  <Label prefHeight="30.0" prefWidth="198.0" text="Street">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -107,7 +107,7 @@
                         <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="268.0">
+                  <TextField fx:id="streetField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="268.0">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
@@ -116,7 +116,7 @@
             </HBox>
             <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="496.0">
                <children>
-                  <Label prefHeight="39.0" prefWidth="198.0" text="Phone Number">
+                  <Label prefHeight="30.0" prefWidth="198.0" text="Phone Number">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -124,7 +124,7 @@
                         <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="268.0">
+                  <TextField fx:id="phoneNumField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="268.0">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
@@ -133,7 +133,7 @@
             </HBox>
             <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="496.0">
                <children>
-                  <Label prefHeight="39.0" prefWidth="198.0" text="Email">
+                  <Label prefHeight="30.0" prefWidth="198.0" text="Email">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -141,7 +141,7 @@
                         <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="268.0">
+                  <TextField fx:id="emailField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="268.0">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
@@ -150,17 +150,17 @@
             </HBox>
             <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="491.0" spacing="10.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="82.0" text="Book Info">
+                  <Button mnemonicParsing="false" onAction="#bookInfoButton" prefHeight="30.0" prefWidth="82.0" text="Book Info">
                      <HBox.margin>
                         <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </Button>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="39.0" prefWidth="82.0" text="Save Book">
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#saveBookButton" prefHeight="30.0" prefWidth="82.0" text="Save Book">
                      <HBox.margin>
                         <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="82.0" text="Edit Book">
+                  <Button mnemonicParsing="false" onAction="#editBookButton" prefHeight="30.0" prefWidth="71.0" text="Edit Book">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
@@ -168,12 +168,12 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="91.0" text="Save Author">
+                  <Button mnemonicParsing="false" onAction="#saveAuthorButton" prefHeight="30.0" prefWidth="91.0" text="Save Author">
                      <HBox.margin>
                         <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="82.0" text="Clear">
+                  <Button mnemonicParsing="false" onAction="#clearButton" prefHeight="30.0" prefWidth="74.0" text="Clear">
                      <HBox.margin>
                         <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                      </HBox.margin>
@@ -182,12 +182,20 @@
             </HBox>
             <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="496.0">
                <children>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="268.0">
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateBookButton" prefHeight="30.0" prefWidth="58.0" text="Update">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <TextField fx:id="searchField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="204.0">
                      <HBox.margin>
                         <Insets bottom="5.0" left="145.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </TextField>
-                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="64.0" text="Search">
+                  <Button mnemonicParsing="false" onAction="#searchButton" prefHeight="30.0" prefWidth="64.0" text="Search">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -199,7 +207,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <TableView prefHeight="90.0" prefWidth="489.0">
+                  <TableView fx:id="table" prefHeight="90.0" prefWidth="489.0">
                      <columns>
                         <TableColumn prefWidth="75.0" text="Title" />
                         <TableColumn prefWidth="75.0" text="ISNB" />
